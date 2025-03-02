@@ -1,3 +1,29 @@
+:root {
+    /* primære font fra google (kommer fra index.html)*/
+    --font-primary: 'Raleway', sans-serif;
+    --cf-font-size: 1rem;
+}
+
+/* Centre alt */
+html, body {
+    height: 100%;
+    font-family: var(--font-primary);
+    font-size: var(--cf-font-size);
+}
+
+#app {
+    height: 100%;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: var(--font-primary);
+}
+ /* Fixed a problem with blazor selecting a box around h1*/
+    h1:focus {
+        outline: none;
+    }
+
+/* Premade blazor stuff */
 .valid.modified:not([type=checkbox]) {
     outline: 1px solid #26b050;
 }
