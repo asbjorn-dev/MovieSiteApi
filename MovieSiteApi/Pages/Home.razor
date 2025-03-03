@@ -1,4 +1,7 @@
 ﻿@page "/"
+@using MovieSiteApi.Interfaces
+@using MovieSiteApi.Models
+@inject ITMDBService TMDBService
 
 <PageTitle>Home</PageTitle>
 
@@ -8,4 +11,28 @@
     Welcome to your new app.
     
     <button class="btn btn-primary mt-3">Primary button test</button>
+    
+    @if (movies != null)
+    {
+        <ul>
+            @foreach (PopularMovie movie in movies.Results)
+            {
+                <li>@movie.Title</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Loading movies...</p>
+    }
 </div>
+
+
+@code {
+    private PopularMoviePaginationResponseModel? movies;
+
+    protected override async Task OnInitializedAsync() // This method will override and run when the page is initialized (blazor is nice)
+    {
+        movies = await TMDBService.GetPopularMoviesAsync();
+    }
+}
