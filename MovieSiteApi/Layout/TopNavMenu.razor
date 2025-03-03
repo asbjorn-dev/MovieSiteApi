@@ -1,0 +1,32 @@
+﻿<nav class="navbar navbar-expand-1g navStyle" data-bs-theme="dark">
+    <!-- container-xxl helps with curved/ultra wide monitors scaling -->
+    <div class="container-xxl">
+        <a href="/" class="me-3">
+            <img src="/images/asbjornMovieLogo.png" height="50" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMSA" aria-expanded="false" aria-label="toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar top right dropdown -->
+        <div class="collapse navbar-collapse" id="navbarMSA">
+            <ul class="navbar-nav me-auto mb-1g-0">
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/" Match="NavLinkMatch.All">
+                        <i class="bi bi-house"></i>
+                        &nbsp;Home
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink class="nav-link" href="/" Match="NavLinkMatch.All">
+                        <i class="bi bi-film"></i>
+                        &nbsp;Movies
+                    </NavLink>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+@code {
+
+}

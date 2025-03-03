@@ -1,0 +1,7 @@
+﻿.navStyle{
+    background-color: #343a40;
+}
+
+.navbar-nav {
+    --bs-navbar-hover-color: rgba(255, 255, 255, 0.5);
+}

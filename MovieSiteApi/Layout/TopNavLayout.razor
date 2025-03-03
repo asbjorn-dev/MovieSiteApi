@@ -1,0 +1,22 @@
+﻿<!-- Layout pages has to inherit LayoutComponentBase -->
+@inherits LayoutComponentBase
+
+<div class="d-flex flex-column h-100">
+    <!-- Top Nav -->
+    <TopNavMenu />
+    <!-- Main Area -->
+    <main class="flex-grow-1">
+        @Body
+    </main>
+    <!-- Footer (shrink makes it always at the bottom of page (bootstrap)) -->
+    <footer class="flex-shrink-0">
+        <Footer />
+    </footer>
+</div>
+
+
+
+
+@code {
+
+}
